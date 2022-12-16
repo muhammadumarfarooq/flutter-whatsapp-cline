@@ -41,7 +41,11 @@ class _MyAppState extends State<MyApp> {
             IconButton(
                 onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
+            PopupMenuButton(icon: const Icon(Icons.more_vert), itemBuilder: (context) => const [
+              PopupMenuItem(value: '1', child: Text('New Group')),
+              PopupMenuItem(value: '2', child: Text('Settings')),
+              PopupMenuItem(value: '3', child: Text('Logout')),
+            ])
           ],
         ),
         body: const TabBarView(
