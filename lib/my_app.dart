@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whats_clone/calls_screen.ts.dart';
 import 'package:whats_clone/chats_screen.dart';
+import 'package:whats_clone/status_screen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.photo_camera)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
           ],
@@ -42,9 +43,7 @@ class _MyAppState extends State<MyApp> {
         body: const TabBarView(
           children: [
             ChatsScreen(),
-            Center(
-              child: Text('Tab 3'),
-            ),
+            StatusScreen(),
             CallsScreen(),
           ],
         ),
