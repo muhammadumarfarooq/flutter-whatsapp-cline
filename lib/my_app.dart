@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whats_clone/calls_screen.ts.dart';
 import 'package:whats_clone/chats_screen.dart';
 
 class MyApp extends StatefulWidget {
@@ -42,11 +43,9 @@ class _MyAppState extends State<MyApp> {
           children: [
             ChatsScreen(),
             Center(
-              child: Text('Tab 2'),
-            ),
-            Center(
               child: Text('Tab 3'),
             ),
+            CallsScreen(),
           ],
         ),
       ),
