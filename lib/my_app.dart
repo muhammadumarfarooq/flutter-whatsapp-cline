@@ -14,8 +14,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
-      initialIndex: 0,
+      length: 4,
+      initialIndex: 1,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('WhatsApp'),
@@ -23,6 +23,9 @@ class _MyAppState extends State<MyApp> {
           bottom: const TabBar(
             indicatorColor: Colors.white,
             tabs: [
+              Tab(
+                icon: Icon(Icons.groups),
+              ),
               Tab(
                 text: 'Chats',
               ),
@@ -35,13 +38,15 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
           ],
         ),
         body: const TabBarView(
           children: [
+            Text('Groups'),
             ChatsScreen(),
             StatusScreen(),
             CallsScreen(),
