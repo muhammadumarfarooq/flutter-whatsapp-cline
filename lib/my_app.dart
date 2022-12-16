@@ -10,6 +10,47 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Text('WhatsApp clone');
+    return DefaultTabController(
+      length: 3,
+      initialIndex: 1,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('WhatsApp'),
+          backgroundColor: const Color(0xff008069),
+          bottom: const TabBar(
+            indicatorColor: Colors.white,
+            tabs: [
+              Tab(
+                text: 'Chats',
+              ),
+              Tab(
+                text: 'Status',
+              ),
+              Tab(
+                text: 'Calls',
+              )
+            ],
+          ),
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.photo_camera)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
+          ],
+        ),
+        body: const TabBarView(
+          children: [
+            Center(
+              child: Text('Tab 1'),
+            ),
+            Center(
+              child: Text('Tab 2'),
+            ),
+            Center(
+              child: Text('Tab 3'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
