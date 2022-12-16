@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whats_clone/chats_screen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      initialIndex: 1,
+      initialIndex: 0,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('WhatsApp'),
@@ -39,9 +40,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: const TabBarView(
           children: [
-            Center(
-              child: Text('Tab 1'),
-            ),
+            ChatsScreen(),
             Center(
               child: Text('Tab 2'),
             ),
