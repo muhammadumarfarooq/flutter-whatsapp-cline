@@ -52,18 +52,23 @@ class StatusScreen extends StatelessWidget {
               child: ListView.builder(
                   itemCount: 10,
                   itemBuilder: (context, index) {
-                    return const ListTile(
-                      leading: CircleAvatar(
-                        radius: 22,
-                        backgroundColor: Colors.green,
-                        backgroundImage: NetworkImage(
-                            'https://images.pexels.com/photos/7562313/pexels-photo-7562313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                    return ListTile(
+                      leading: Container(
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.green, width: 3)),
+                        child: const CircleAvatar(
+                          radius: 22,
+                          backgroundColor: Colors.green,
+                          backgroundImage: NetworkImage(
+                              'https://images.pexels.com/photos/7562313/pexels-photo-7562313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                        ),
                       ),
-                      title: Text(
+                      title: const Text(
                         'Hamza',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      subtitle: Text(
+                      subtitle: const Text(
                         'Today, 7:15am',
                         style: TextStyle(color: Color(0xff6a7071)),
                       ),
